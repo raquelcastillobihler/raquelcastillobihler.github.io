@@ -6,7 +6,7 @@ subtitle: Prospective graduate student. Aspiring neuroscience researcher.
 
 profile:
   align: right
-  image: prof_pic.jpg # <!-- TODO -->
+  image: profile_pic.jpg # <!-- TODO -->
   image_circular: false # crops the image to make it circular
   address: >
     <p>Groningen, Netherlands</p>
