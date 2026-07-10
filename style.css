@@ -1,0 +1,169 @@
+:root {
+  --bg: #fbf6f0;
+  --text: #221a17;
+  --muted: #7a6a61;
+  --border: rgba(34, 26, 23, 0.1);
+  --accent: #c76b5a;      /* golden-gate warm coral */
+  --accent-2: #e0a56a;    /* sunset gold */
+  --accent-soft: rgba(199, 107, 90, 0.22);
+  --max: 760px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background: var(--bg);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.top-bar {
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+}
+
+.wrap {
+  width: min(calc(100% - 2rem), var(--max));
+  margin: 0 auto;
+}
+
+.home {
+  padding: 3.5rem 0 4rem;
+}
+
+.intro-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 1.6rem;
+}
+
+.intro {
+  align-self: end;
+}
+
+.nameplate,
+.tagline,
+p {
+  margin: 0;
+}
+
+.nameplate {
+  font-size: 1.5rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.35rem;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 0.98rem;
+  font-style: italic;
+  margin-bottom: 1.1rem;
+}
+
+.social-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-soft);
+  text-underline-offset: 0.16em;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.social-link:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.social-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.portrait-shell {
+  width: 360px;
+  justify-self: end;
+}
+
+.portrait {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(34, 26, 23, 0.16);
+}
+
+.bio {
+  display: grid;
+  gap: 1rem;
+}
+
+.bio p {
+  color: rgba(34, 26, 23, 0.86);
+}
+
+.bio a {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-soft);
+  text-underline-offset: 0.16em;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.bio a:hover {
+  text-decoration-color: var(--accent);
+}
+
+@media (max-width: 820px) {
+  .intro-row {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    align-items: start;
+  }
+
+  .home {
+    padding-top: 2.5rem;
+  }
+
+  .portrait-shell {
+    order: -1;
+    justify-self: stretch;
+    width: 100%;
+  }
+}
