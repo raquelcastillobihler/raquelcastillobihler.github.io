@@ -41,21 +41,3 @@ in the Actions run summary once it finishes (usually under a minute).
 `https://<your-site>/a/` currently shows the exact same page as the homepage. It
 is a standalone copy, so you can later replace everything inside the `a/` folder
 (e.g. with a tailored artifact for an application) without touching the main site.
-
-## Visitor analytics (optional)
-
-Both pages include a **GoatCounter** snippet — privacy-friendly, cookieless, and
-no consent banner needed. It is **active**, reporting to the site code
-`raquelsteve`:
-
-- Dashboard: <https://raquelsteve.goatcounter.com/> (log in via
-  <https://www.goatcounter.com/>).
-- To point it at a different account, change the code in the
-  `data-goatcounter="https://raquelsteve.goatcounter.com/count"` line in both
-  `index.html` **and** `a/index.html`.
-
-The dashboard shows visit counts, timing, rough location, referrer, and a
-per-URL breakdown — so `/` and `/a/` are tracked separately. No tool can reveal a
-visitor's name. To infer *who* opened a link, hand out distinct links: the `/a/`
-page is already separate, and you can add tags like `?ref=linkedin` or
-`?ref=email-jane` to any link so each shows up as its own referrer.
